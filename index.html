@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ICONO -->
+    <title>Visor Anaglifo 3D</title>
+
     <link
       rel="icon"
       href="https://cdn-icons-png.flaticon.com/512/685/685655.png"
     />
 
-    <!-- TITLE -->
-    <title>Visor Estereoscópico 3D</title>
-
-    <!-- BOOTSTRAP -->
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -24,52 +28,47 @@
 
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark glass-navbar">
       <div class="container">
-        <span class="navbar-brand">Visor Estereoscópico 3D</span>
+        <span class="navbar-brand fw-bold">🧠 Visor Anaglifo 3D</span>
       </div>
     </nav>
 
-    <div class="container mt-4">
-      <!-- BOTONES -->
-      <div class="text-center mb-3">
-        <button class="btn btn-light" onclick="cambiarModo('normal')">
-          Normal
-        </button>
-        <button class="btn btn-success" onclick="cambiarModo('side')">
-          Side by Side
-        </button>
-        <button class="btn btn-danger" onclick="cambiarModo('anaglifo')">
-          Anaglifo
-        </button>
+    <div class="container main-content">
+      <!-- TÍTULO -->
+      <div class="text-center mb-4">
+        <h1 class="title">Galería Estereoscópica</h1>
+        <p class="subtitle">Visualiza imágenes en formato anaglifo 3D</p>
       </div>
 
       <!-- CARRUSEL -->
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner" id="carouselInner"></div>
+      <div class="carousel-container">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner" id="carouselInner"></div>
 
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon"></span>
-        </button>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
 
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon"></span>
-        </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
+    <!-- FOOTER FIJO -->
+    <footer class="footer">
       <p>Desarrollado por Álvaro Madrid Morales</p>
     </footer>
 
