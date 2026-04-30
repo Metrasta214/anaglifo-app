@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
 
-    <!-- Google Font -->
+    <!-- Fuente -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
       rel="stylesheet"
@@ -28,46 +28,52 @@
 
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark glass-navbar">
+    <nav class="navbar glass-navbar">
       <div class="container">
-        <span class="navbar-brand fw-bold">🧠 Visor Anaglifo 3D</span>
+        <span class="navbar-brand">🔴🔵 Visor Anaglifo 3D</span>
       </div>
     </nav>
 
     <div class="container main-content">
-      <!-- TÍTULO -->
       <div class="text-center mb-4">
-        <h1 class="title">Galería Estereoscópica</h1>
-        <p class="subtitle">Visualiza imágenes en formato anaglifo 3D</p>
+        <h1 class="title">Galería 3D</h1>
+        <p class="subtitle">Experiencia visual estereoscópica</p>
       </div>
 
       <!-- CARRUSEL -->
-      <div class="carousel-container">
-        <div id="carouselExample" class="carousel slide">
+      <div class="carousel-wrapper">
+        <div
+          id="carouselExample"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <!-- indicadores -->
+          <div class="carousel-indicators" id="indicadores"></div>
+
           <div class="carousel-inner" id="carouselInner"></div>
 
+          <!-- flechas -->
           <button
-            class="carousel-control-prev"
+            class="carousel-control-prev custom-arrow"
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon"></span>
+            ‹
           </button>
 
           <button
-            class="carousel-control-next"
+            class="carousel-control-next custom-arrow"
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon"></span>
+            ›
           </button>
         </div>
       </div>
     </div>
 
-    <!-- FOOTER FIJO -->
     <footer class="footer">
       <p>Desarrollado por Álvaro Madrid Morales</p>
     </footer>

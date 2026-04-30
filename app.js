@@ -11,26 +11,35 @@ const imagenes = [
   "assets/imagen-anaglifo10.jpg",
   "assets/imagen-anaglifo11.jpg",
   "assets/imagen-anaglifo12.jpg",
-  "assets/imagen13-anaglifo.jpg",
+  "assets/imagen-anaglifo13.jpg",
   "assets/imagen-anaglifo14.jpg",
   "assets/imagen-anaglifo15.jpg",
 ];
 
-function cargarCarrusel() {
-  const contenedor = document.getElementById("carouselInner");
+const carouselInner = document.getElementById("carouselInner");
+const indicadores = document.getElementById("indicadores");
 
-  imagenes.forEach((img, index) => {
-    const div = document.createElement("div");
-    div.classList.add("carousel-item");
+imagenes.forEach((img, index) => {
+  // SLIDE
+  const div = document.createElement("div");
+  div.classList.add("carousel-item");
+  if (index === 0) div.classList.add("active");
 
-    if (index === 0) div.classList.add("active");
+  div.innerHTML = `<img src="${img}" class="d-block w-100">`;
+  carouselInner.appendChild(div);
 
-    div.innerHTML = `
-      <img src="${img}" class="d-block w-100">
-    `;
+  // INDICADOR
+  const btn = document.createElement("button");
+  btn.setAttribute("data-bs-target", "#carouselExample");
+  btn.setAttribute("data-bs-slide-to", index);
 
-    contenedor.appendChild(div);
-  });
-}
+  if (index === 0) btn.classList.add("active");
 
-cargarCarrusel();
+  indicadores.appendChild(btn);
+});
+
+// AUTOPLAY
+const carousel = new bootstrap.Carousel("#carouselExample", {
+  interval: 3000,
+  ride: "carousel",
+});
